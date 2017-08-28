@@ -10,7 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170827222338) do
+ActiveRecord::Schema.define(version: 20170828024944) do
+
+  create_table "cargas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "cajas"
+    t.float "costoManejo", limit: 24
+    t.float "alto", limit: 24
+    t.float "ancho", limit: 24
+    t.float "largo", limit: 24
+    t.float "pesoEstimado", limit: 24
+    t.string "direccion"
+    t.float "valorAsegurado", limit: 24
+    t.string "nombreDestinatario"
+    t.string "telefonoDestinatario"
+    t.integer "recibeSabados"
+    t.float "flete", limit: 24
+    t.float "fleteTotal", limit: 24
+    t.string "guia"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_cargas_on_user_id"
+  end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "user"
@@ -24,4 +45,5 @@ ActiveRecord::Schema.define(version: 20170827222338) do
     t.string "name"
   end
 
+  add_foreign_key "cargas", "users"
 end

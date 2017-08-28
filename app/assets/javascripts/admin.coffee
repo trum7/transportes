@@ -1,3 +1,9 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+
+
+#= require admin/jquery
+#= require admin/bootstrap.min
+#= require admin/sb-admin-2
+#= require admin/metisMenu
+#= require admin/morris
+#= require admin/sendajax
+#= require admin/sortable

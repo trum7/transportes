@@ -1,0 +1,92 @@
+<%= form_with(model: carga, local: true) do |form| %>
+  <% if carga.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(carga.errors.count, "error") %> prohibited this carga from being saved:</h2>
+
+      <ul>
+      <% carga.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user %>
+    <%= form.text_field :user, id: :carga_user %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cajas %>
+    <%= form.number_field :cajas, id: :carga_cajas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :costoManejo %>
+    <%= form.text_field :costoManejo, id: :carga_costoManejo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alto %>
+    <%= form.text_field :alto, id: :carga_alto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ancho %>
+    <%= form.text_field :ancho, id: :carga_ancho %>
+  </div>
+
+  <div class="field">
+    <%= form.label :largo %>
+    <%= form.text_field :largo, id: :carga_largo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pesoEstimado %>
+    <%= form.text_field :pesoEstimado, id: :carga_pesoEstimado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :direccion %>
+    <%= form.text_field :direccion, id: :carga_direccion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valorAsegurado %>
+    <%= form.text_field :valorAsegurado, id: :carga_valorAsegurado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nombreDestinatario %>
+    <%= form.text_field :nombreDestinatario, id: :carga_nombreDestinatario %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefonoDestinatario %>
+    <%= form.text_field :telefonoDestinatario, id: :carga_telefonoDestinatario %>
+  </div>
+
+  <div class="field">
+    <%= form.label :recibeSabados %>
+    <%= form.number_field :recibeSabados, id: :carga_recibeSabados %>
+  </div>
+
+  <div class="field">
+    <%= form.label :flete %>
+    <%= form.text_field :flete, id: :carga_flete %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fleteTotal %>
+    <%= form.text_field :fleteTotal, id: :carga_fleteTotal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :guia %>
+    <%= form.text_field :guia, id: :carga_guia %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

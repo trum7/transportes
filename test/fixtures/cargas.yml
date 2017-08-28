@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: 
+  cajas: 1
+  costoManejo: 1.5
+  alto: 1.5
+  ancho: 1.5
+  largo: 1.5
+  pesoEstimado: 1.5
+  direccion: MyString
+  valorAsegurado: 1.5
+  nombreDestinatario: MyString
+  telefonoDestinatario: MyString
+  recibeSabados: 1
+  flete: 1.5
+  fleteTotal: 1.5
+  guia: MyString
+
+two:
+  user: 
+  cajas: 1
+  costoManejo: 1.5
+  alto: 1.5
+  ancho: 1.5
+  largo: 1.5
+  pesoEstimado: 1.5
+  direccion: MyString
+  valorAsegurado: 1.5
+  nombreDestinatario: MyString
+  telefonoDestinatario: MyString
+  recibeSabados: 1
+  flete: 1.5
+  fleteTotal: 1.5
+  guia: MyString

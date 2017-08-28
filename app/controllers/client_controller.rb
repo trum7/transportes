@@ -1,4 +1,4 @@
 class ClientController < ApplicationController
-  def index
+  def client_index
   end
 end

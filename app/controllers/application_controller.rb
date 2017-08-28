@@ -16,10 +16,9 @@ class ApplicationController < ActionController::Base
 
   def require_admin
     puts current_user.token
-    if current_user != nil
-      redirect_to root_path unless current_user.level = 4
-    else
-      redirect_to root_path
+    puts current_user.level
+    if current_user != nil and current_user.level != 4
+      redirect_to root_path 
     end
   end
 

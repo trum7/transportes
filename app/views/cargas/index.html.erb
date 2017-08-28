@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cargas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Cajas</th>
+      <th>Costomanejo</th>
+      <th>Alto</th>
+      <th>Ancho</th>
+      <th>Largo</th>
+      <th>Pesoestimado</th>
+      <th>Direccion</th>
+      <th>Valorasegurado</th>
+      <th>Nombredestinatario</th>
+      <th>Telefonodestinatario</th>
+      <th>Recibesabados</th>
+      <th>Flete</th>
+      <th>Fletetotal</th>
+      <th>Guia</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cargas.each do |carga| %>
+      <tr>
+        <td><%= carga.user %></td>
+        <td><%= carga.cajas %></td>
+        <td><%= carga.costoManejo %></td>
+        <td><%= carga.alto %></td>
+        <td><%= carga.ancho %></td>
+        <td><%= carga.largo %></td>
+        <td><%= carga.pesoEstimado %></td>
+        <td><%= carga.direccion %></td>
+        <td><%= carga.valorAsegurado %></td>
+        <td><%= carga.nombreDestinatario %></td>
+        <td><%= carga.telefonoDestinatario %></td>
+        <td><%= carga.recibeSabados %></td>
+        <td><%= carga.flete %></td>
+        <td><%= carga.fleteTotal %></td>
+        <td><%= carga.guia %></td>
+        <td><%= link_to 'Show', carga %></td>
+        <td><%= link_to 'Edit', edit_carga_path(carga) %></td>
+        <td><%= link_to 'Destroy', carga, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Carga', new_carga_path %>

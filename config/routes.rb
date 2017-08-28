@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
+  resources :cargas
   resources :users
-  get 'client/index'
+  get 'client/index', to: 'client#client_index'
 
-  get 'admin/index'
+  get 'admin/index', to: 'admin#admin_index'
 
   get 'signin/index'
 
